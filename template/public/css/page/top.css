@@ -83,6 +83,41 @@
   color: #0A00FF;
 }
 
+.section-cheap-flight .cheap-flight .search {
+  display: flex;
+  margin-bottom: 1.2195121951vw;
+}
+.section-cheap-flight .cheap-flight .search .dep-date {
+  width: 50%;
+  margin: 0 2.4390243902vw;
+}
+.section-cheap-flight .cheap-flight .search .dep-date p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3.6585365854vw;
+  margin-bottom: 1.2195121951vw;
+}
+.section-cheap-flight .cheap-flight .search .dep-date .input {
+  width: 100%;
+  background-image: url("../../images/common/ic_datepicker.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 2.4390243902vw;
+}
+.section-cheap-flight .cheap-flight .search .departure {
+  width: 50%;
+  margin: 0 2.4390243902vw;
+}
+.section-cheap-flight .cheap-flight .search .departure p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3.6585365854vw;
+  margin-bottom: 1.2195121951vw;
+}
+.section-cheap-flight .cheap-flight .search .departure .input {
+  width: 100%;
+  background-image: url("../../images/common/ic_arrow_down.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
 .section-cheap-flight .cheap-flight-tab-list {
   display: flex;
   margin: 0 1.9512195122vw;
@@ -136,6 +171,56 @@
 }
 .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr:last-child td {
   border-bottom: none;
+}
+
+.section-search .search .content {
+  padding: 2.4390243902vw;
+  border: 1px solid #44C7B3;
+  border-radius: 2.4390243902vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-search .search .content .departure {
+  width: 100%;
+  background-image: url("../../images/common/ic_flight_departure.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 2.4390243902vw;
+}
+.section-search .search .content .arrival {
+  width: 100%;
+  background-image: url("../../images/common/ic_flight_arrival.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 2.4390243902vw;
+}
+.section-search .search .content .dep-date {
+  width: 50%;
+  background-image: url("../../images/common/ic_datepicker.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 2.4390243902vw;
+}
+.section-search .search .content .arr-date {
+  width: 50%;
+  background-image: url("../../images/common/ic_datepicker.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 2.4390243902vw;
+}
+.section-search .search .content .passengers {
+  width: 50%;
+  background-image: url("../../images/common/ic_passenger.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 2.4390243902vw;
+}
+.section-search .search .content .seat-type {
+  width: 50%;
+  background-image: url("../../images/common/ic_seat_type.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 2.4390243902vw;
 }
 
 .mainvisual {

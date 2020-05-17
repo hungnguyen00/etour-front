@@ -62,8 +62,8 @@
     background: rgba(255,250,136,255);
 }
 .ttl-com {
-    padding:  0 10px 10px;
-    font-size: 18px;
+    padding:  0 setByVW(10) setByVW(10);
+    @include font-size-vw(18);
     line-height: 1.4em;
     span {
         font-weight: bold;
@@ -71,10 +71,26 @@
     }
 }
 .section {
-    margin-bottom: 20px;
+    margin-bottom: setByVW(20);
 }
-
 .container {
     padding-left: 0;
     padding-right: 0;
+}
+.input {
+    height: setByVW(50);
+    box-shadow: 0px 0px setByVW(7) -2px rgba(0,0,0,0.26);
+    border-radius: setByVW(3);
+    border: none;
+    margin-bottom: setByVW(10);
+}
+.button {
+    margin: setByVW(5) 0;
+    width: 100%;
+    border-radius: setByVW(100);
+    background-color: #21D8BB;
+    height: setByVW(55);
+    color: #FFF;
+    @include font-size-vw(21);
+    
 }

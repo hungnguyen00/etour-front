@@ -1,0 +1,53 @@
+.section-search {
+    .search {
+        .content {
+            padding: setByVW(10);
+            border: 1px solid #44C7B3;
+            border-radius: setByVW(10);
+            display: flex;
+            flex-wrap: wrap;
+            .departure {
+                width: 100%;
+                background-image: url('../../images/common/ic_flight_departure.png');
+                background-repeat: no-repeat;
+                background-position: left;
+                background-position-x: setByVW(10);
+            }
+            .arrival {
+                width: 100%;
+                background-image: url('../../images/common/ic_flight_arrival.png');
+                background-repeat: no-repeat;
+                background-position: left;
+                background-position-x: setByVW(10);
+            }
+            .dep-date {
+                width: 50%;
+                background-image: url('../../images/common/ic_datepicker.png');
+                background-repeat: no-repeat;
+                background-position: left;
+                background-position-x: setByVW(10);
+            }
+            .arr-date {
+                width: 50%;
+                background-image: url('../../images/common/ic_datepicker.png');
+                background-repeat: no-repeat;
+                background-position: left;
+                background-position-x: setByVW(10);
+            }
+            .passengers {
+                width: 50%;
+                background-image: url('../../images/common/ic_passenger.png');
+                background-repeat: no-repeat;
+                background-position: left;
+                background-position-x: setByVW(10);
+            }
+            .seat-type {
+                width: 50%;
+                background-image: url('../../images/common/ic_seat_type.png');
+                background-repeat: no-repeat;
+                background-position: left;
+                background-position-x: setByVW(10);
+            }
+        }
+    }
+}

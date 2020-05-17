@@ -1,5 +1,40 @@
 .section-cheap-flight {
     .cheap-flight {
+        .search {
+            display: flex;
+            margin-bottom: setByVW(5);
+            .dep-date {
+                width: 50%;
+                margin: 0 setByVW(10);
+                p {
+                    font-family: $font_source_sans_pro;
+                    @include font-size-vw(15);
+                    margin-bottom: setByVW(5);
+                }
+                .input {
+                    width: 100%;
+                    background-image: url('../../images/common/ic_datepicker.png');
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-position-x: setByVW(10);
+                }
+            }
+            .departure {
+                width: 50%;
+                margin: 0 setByVW(10);
+                p {
+                    font-family: $font_source_sans_pro;
+                    @include font-size-vw(15);
+                    margin-bottom: setByVW(5);
+                }
+                .input {
+                    width: 100%;
+                    background-image: url('../../images/common/ic_arrow_down.png');
+                    background-repeat: no-repeat;
+                    background-position: right;
+                }
+            }
+        }
         &-tab-list {
             display: flex;
             margin: 0 setByVW(8);
