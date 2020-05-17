@@ -1,0 +1,47 @@
+$main_bgColor: #fff;
+$main_color: #fff;
+$color_black: #000;
+$color_white: #fff;
+$color_green: #8fda00;
+$color_orange: #fdab2a;
+$color_red: #e66060;
+$color_btn_green: #38c4a8;
+$color_btn_orange: #EDAE21;
+$color_bg_light: #fef0dd;
+$color_bg_dark: #fda228;
+$color_bg_gray: #f8f8f8;
+$color_text_default: #000;
+$color_text_dark: #555654;
+$color_text_light: #999;
+$color_text_light2: #707374;
+$color_text_light3: #adb1b2;
+$color_border_default: #ccc;
+$color_border_light: #eee;
+$color_border_light2: #edeff0;
+$color_border_light3: #dedede;
+$color_grad_green: #86d462, #99e9c7;
+//- PATH file
+$path_images: '../../images';
+
+//- Font family
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+$font_family_default: 'Nunito Sans', sans-serif;
+$font_open_sans: 'Open Sans', sans-serif;
+$font_poppins: 'Poppins', sans-serif;
+$font_source_sans_pro: 'Source Sans Pro', sans-serif;
+
+$width_design: 410;
+//- Screen Size;
+$screenXS: 575px;
+$screenSM: 767px;
+$screenMD: 992px;
+$screenXL: 1199px;
+
+$sp-small: 375px;
+$sp-large: 767px;
+$ipad: 1024px;
+

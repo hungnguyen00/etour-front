@@ -1,0 +1,49 @@
+@mixin screen($size){
+    @media screen and (max-width: $size){
+      @content;
+    }
+}
+
+@mixin bg($img,$rep,$post) {
+    background-image: url(#{$image-path}/#{$img});
+    background-repeat: $rep;
+    background-position: $post;
+}
+
+@mixin bgs($img,$rep,$post,$size) {
+    background-image: url(#{$image-path}/#{$img});
+    background-repeat: $rep;
+    background-position: $post;
+    -webkit-background-size: $size;
+    background-size: $size;
+}
+
+@mixin bor($color) {
+    border: 1px solid $color;
+}
+
+@mixin font-size-vw($sizeValue) {
+    $vw-context: ($width_design * 0.01);
+    $value: ($sizeValue / $vw-context);
+    font-size: $value + vw;
+}
+
+@mixin dot-line($number) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;  
+}
+
+@mixin font-size($sizeValue) {
+    font-size: $sizeValue+px;
+}
+
+@mixin percentWidth($myWidth, $maxWidth){
+    width: percentage($myWidth / $maxWidth);
+}
+
+@function setByVW($size) {
+    $set_vw: $size*100/$width_design;
+    @return #{$set_vw}vw;
+}

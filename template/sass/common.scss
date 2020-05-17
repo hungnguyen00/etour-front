@@ -1,0 +1,80 @@
+@import "./config/const";
+@import "./includes/func";
+.block_section {
+    padding: 100px 0;
+    @include screen ($ipad) {
+        padding: 70px 0;
+    }
+    @include screen ($sp-large) {
+        padding: setByVW(100) 0;
+    } 
+}
+.alive_btn {
+    a {
+        align-items: center; 
+        background: transparent;
+        color: #fff;
+        display: flex; 
+        font-size: 18px; 
+        font-weight: bold;
+        justify-content: center;
+        line-height: 1.4;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid #555654; 
+        max-width: 300px;
+        height: 65px;
+        transition: 0.3s ease all;
+        position: relative;
+        &:hover {
+            background-color: #8fda00;
+            border: #8fda00;
+            color: #fff;
+        }
+    }
+    @include screen ($sp-large) {
+        a {
+            max-width: setByVW(350);
+            height: setByVW(90);
+            @include font-size-vw(20);
+            letter-spacing: setByVW(4);
+        }
+    }
+}
+
+#main {
+    margin: 0 10px;
+}
+
+.notice-num {
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    -webkit-border-radius: 8px / 8px;
+    border-radius: 8px / 8px;
+    -ms-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.41);
+    -o-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.41);
+    box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.41);
+    background: rgba(255,250,136,255);
+}
+.ttl-com {
+    padding:  0 10px 10px;
+    font-size: 18px;
+    line-height: 1.4em;
+    span {
+        font-weight: bold;
+        color: #7CD8C9;
+    }
+}
+.section {
+    margin-bottom: 20px;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}

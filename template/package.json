@@ -1,0 +1,27 @@
+{
+  "name": "alive",
+  "author": "alive team",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-sass": "^1.0.0"
+  },
+  "scripts": {
+    "start": "grunt dev",
+    "dev": "grunt dev",
+    "build": "grunt build"
+  },
+  "dependencies": {
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "~3.0.2",
+    "node-sass": "^4.14.1",
+    "scss": "^0.2.4"
+  },
+  "main": "Gruntfile.js",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.block_section {
+  padding: 100px 0;
+}
+@media screen and (max-width: 1024px) {
+  .block_section {
+    padding: 70px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .block_section {
+    padding: 15.625vw 0;
+  }
+}
+
+.alive_btn a {
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #555654;
+  max-width: 300px;
+  height: 65px;
+  transition: 0.3s ease all;
+  position: relative;
+}
+.alive_btn a:hover {
+  background-color: #8fda00;
+  border: #8fda00;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .alive_btn a {
+    max-width: 54.6875vw;
+    height: 14.0625vw;
+    font-size: 3.125vw;
+    letter-spacing: 0.625vw;
+  }
+}
+
+.ttl_com {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  text-align: center;
+  color: #555654;
+}
+.ttl_com span {
+  display: block;
+  font-size: 14px;
+  color: #bcbec0;
+  margin-top: 20px;
+  letter-spacing: 1.4px;
+}
+@media screen and (max-width: 767px) {
+  .ttl_com {
+    font-size: 5.625vw;
+  }
+  .ttl_com span {
+    font-size: 3.75vw;
+    margin-top: 4.6875vw;
+    letter-spacing: 0.375vw;
+    font-weight: 600;
+  }
+}
+
+/*# sourceMappingURL=commom.css.map */

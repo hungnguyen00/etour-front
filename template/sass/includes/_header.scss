@@ -1,0 +1,183 @@
+/* header
+---------------------------- */
+header {
+    background: #B7F8EE;
+    height: 50px;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: 10000; 
+    transition: 0.3s ease all;
+    @include screen ($sp-large) {
+        
+    }
+    .container {
+        height: 100%;
+    }
+    &.header {
+        padding-bottom: 50px;
+        .inner {
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            .logo {
+                flex-grow: 1;
+            }
+            .menu-area {
+                flex-grow: 1;
+                display: flex;
+                justify-content: flex-end;
+                .notification {
+                    position: relative;
+                    .notice-num {
+                        top: 0;
+                        left: 15px;
+                    }
+                }
+                .qa {
+                }
+                .favorite {
+                    position: relative;
+                    .notice-num {
+                        top: 0;
+                        left: 20px;
+                    }
+                }
+                .menu {
+                }
+            }
+        }
+        &_right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            li {
+                margin: 0 17px;
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 10px 0;
+                    font-size: 12px;
+                    font-weight: 500;
+                    position: relative;
+                    &::after {
+                        display: block;
+                        content: "";
+                        width: 0;
+                        height: 2px;
+                        background: #fff;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transition: 0.3s all ease;
+                        opacity: 0;
+                    }
+                    &:hover {
+                        &::after {
+                            opacity: 1;
+                            width: 100%;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include screen ($sp-large) {
+            
+            &_right {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                background-color: rgba($color: #555654, $alpha: 1);
+                z-index: 99;
+                padding-top: 0;
+            }
+            .nav {
+                flex-direction: column;
+                justify-content: start;
+                padding: setByVW(110) setByVW(20) 0;
+                height: 100%;     
+                overflow-y: scroll;
+                li {
+                    margin-right: 0;
+                    width: 100%;
+                    border-bottom: 1px solid #f5f5f5;
+                    &:first-child{
+                      border-top: 1px solid #f5f5f5;
+                    }
+                    a {
+                      @include font-size-vw(30);
+                      font-weight: bold;
+                      line-height: 1;
+                      padding: setByVW(38);
+                      display: block;
+                      text-align: center;
+                      &::after {
+                          display: none;
+                      }
+                    }
+                }
+            }
+            .nav_icon {
+                width: setByVW(70);
+                position: absolute;
+                z-index: 100;
+                right: setByVW(50);
+                top: 50%;
+                transform: translateY(-50%);
+                .txt {
+                    color: #fff;
+                    @include font-size-vw(24);
+                    letter-spacing: setByVW(2.59);
+                    font-weight: 500;
+                }
+                &:after, 
+                &:before, 
+                div {
+                    background-color: #fff;
+                    content: '';
+                    display: none;
+                    height: 2px;
+                    margin: setByVW(20) 0;
+                    transition: all .3s ease-in-out;                    
+                }
+                &_open {
+                    &:after, 
+                    &:before, 
+                    div {
+                        display: block;
+                    }
+                    &::before {
+                        $size: setByVW(22);
+                        transform: translateY(#{$size}) rotate(135deg) !important;
+                    }
+                    &:after {
+                        $size: setByVW(-23);
+                        transform: translateY(#{$size}) rotate(-135deg) !important;
+                    }
+                    .txt {
+                        display: none;
+                    }
+                    div {
+                        display: block;
+                        transform: scale(0);
+                    }
+                }
+            }
+        }
+    }
+    &.scroll {
+        background-color: rgba($color: #555654, $alpha: 0.85); 
+    }
+}

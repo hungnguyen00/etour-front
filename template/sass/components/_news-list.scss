@@ -1,0 +1,23 @@
+.section-news {
+    .news {
+        &-list {
+            &-item {
+                display: flex;
+                margin-bottom: setByVW(10);
+                .info {
+                    padding: 0 setByVW(10);
+                    .date {
+                        @include font-size-vw(12);
+                        line-height: 1;
+                    }
+                    .ttl {
+                        @include dot-line(1);
+                        line-height: 1.3em;
+                        text-decoration: underline;
+                        color: #0A00FF;
+                    }
+                }
+            }
+        }
+    }
+}
