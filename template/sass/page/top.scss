@@ -5,57 +5,9 @@
 @import "../components/cheap-flight";
 @import "../components/search-box";
 $path_images: '../../images/top';
-.mainvisual {
-    min-height: 800px;
-    background: url(#{$path_images}/main-img.jpg) no-repeat center center;
-    background-size: cover;
+.main-visual {
+    padding-top: 50px;
     
-    h1 {
-        font-size: 40px;
-        font-weight: bold;
-        line-height: 1.9;
-        letter-spacing: 8px;
-        text-align: left;
-        color: #ffffff;
-        padding-top: 155px; 
-        margin-bottom: 30px;
-        padding-left: 60px;
-    }
-    .alive_btn { 
-        padding-left: 60px;
-        &.btn_detail {
-            a {
-                border-color: #fff;
-                color: #fff;
-                &:hover {
-                    background-color: #f79019;
-                    border: #f79019
-                }
-            }
-        }
-    }
-    @include screen ($ipad) {
-        min-height: 600px;
-        h1 {
-            padding-top: 80px;
-        }
-    }
-    @include screen ($sp-large) {
-        background: url(#{$path_images}/main-img_sp.png) no-repeat center center;
-        background-size: cover;
-        min-height: setByVW(955);
-        h1 {
-            @include font-size-vw(40);
-            letter-spacing: setByVW(8);
-            line-height: 1.9em;
-            padding-top: setByVW(215);
-            margin-bottom: setByVW(50);
-            padding-left: setByVW(45);
-        }
-        .alive_btn {
-            padding-left: setByVW(45);
-        }
-    }
 }
 
 /* lastest_works

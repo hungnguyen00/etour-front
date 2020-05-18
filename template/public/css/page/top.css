@@ -4,8 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
 .section-blog .blog-list-item {
   display: flex;
-  margin-bottom: 2.4390243902vw;
-  border-radius: 2.4390243902vw;
+  margin-bottom: 10px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 1px 10px 0 rgba(0, 0, 0, 0.15);
   background: white;
@@ -13,7 +13,7 @@
 }
 .section-blog .blog-list-item .thumb {
   flex-grow: 1;
-  flex: 0 0 24.3902439024vw;
+  flex: 0 0 23%;
 }
 .section-blog .blog-list-item .thumb img {
   width: 100%;
@@ -22,7 +22,7 @@
 }
 .section-blog .blog-list-item .info {
   flex-grow: 3;
-  padding: 2.4390243902vw;
+  padding: 10px;
 }
 .section-blog .blog-list-item .info .ttl a {
   font-family: "Open Sans", sans-serif;
@@ -45,32 +45,52 @@
   z-index: 99;
 }
 .section-blog .blog-list-item .info .country {
-  padding: 0.487804878vw 0;
+  padding: 2px 0;
   color: #29BEA7;
   font-family: "Poppins", sans-serif;
   line-height: 1.45em;
-  font-size: 2.9268292683vw;
+  font-size: 12px;
 }
 .section-blog .blog-list-item .info .des {
   font-family: "Open Sans", sans-serif;
-  font-size: 2.9268292683vw;
-  padding-right: 4.8780487805vw;
+  font-size: 12px;
+  padding-right: 20px;
   line-height: 1.5em;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+@media screen and (max-width: 767px) {
+  .section-blog .blog-list-item {
+    margin-bottom: 2.4390243902vw;
+    border-radius: 2.4390243902vw;
+  }
+  .section-blog .blog-list-item .thumb {
+    flex: 0 0 24.3902439024vw;
+  }
+  .section-blog .blog-list-item .info {
+    padding: 2.4390243902vw;
+  }
+  .section-blog .blog-list-item .info .country {
+    padding: 0.487804878vw 0;
+    font-size: 2.9268292683vw;
+  }
+  .section-blog .blog-list-item .info .des {
+    font-size: 2.9268292683vw;
+    padding-right: 4.8780487805vw;
+  }
+}
 
 .section-news .news-list-item {
   display: flex;
-  margin-bottom: 2.4390243902vw;
+  margin-bottom: 10px;
 }
 .section-news .news-list-item .info {
-  padding: 0 2.4390243902vw;
+  padding: 0 10px;
 }
 .section-news .news-list-item .info .date {
-  font-size: 2.9268292683vw;
+  font-size: 12px;
   line-height: 1;
 }
 .section-news .news-list-item .info .ttl {
@@ -81,6 +101,20 @@
   line-height: 1.3em;
   text-decoration: underline;
   color: #0A00FF;
+}
+@media screen and (max-width: 767px) {
+  .section-news .news-list-item {
+    margin-bottom: 2.4390243902vw;
+  }
+  .section-news .news-list-item .info {
+    padding: 0 2.4390243902vw;
+  }
+  .section-news .news-list-item .info .date {
+    font-size: 2.9268292683vw;
+  }
+  .section-news .news-list-item .info .ttl {
+    font-size: 3.4146341463vw;
+  }
 }
 
 .section-cheap-flight .cheap-flight .search {
@@ -223,58 +257,8 @@
   background-position-x: 2.4390243902vw;
 }
 
-.mainvisual {
-  min-height: 800px;
-  background: url(../../images/top/main-img.jpg) no-repeat center center;
-  background-size: cover;
-}
-.mainvisual h1 {
-  font-size: 40px;
-  font-weight: bold;
-  line-height: 1.9;
-  letter-spacing: 8px;
-  text-align: left;
-  color: #ffffff;
-  padding-top: 155px;
-  margin-bottom: 30px;
-  padding-left: 60px;
-}
-.mainvisual .alive_btn {
-  padding-left: 60px;
-}
-.mainvisual .alive_btn.btn_detail a {
-  border-color: #fff;
-  color: #fff;
-}
-.mainvisual .alive_btn.btn_detail a:hover {
-  background-color: #f79019;
-  border: #f79019;
-}
-@media screen and (max-width: 1024px) {
-  .mainvisual {
-    min-height: 600px;
-  }
-  .mainvisual h1 {
-    padding-top: 80px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .mainvisual {
-    background: url(../../images/top/main-img_sp.png) no-repeat center center;
-    background-size: cover;
-    min-height: 232.9268292683vw;
-  }
-  .mainvisual h1 {
-    font-size: 9.756097561vw;
-    letter-spacing: 1.9512195122vw;
-    line-height: 1.9em;
-    padding-top: 52.4390243902vw;
-    margin-bottom: 12.1951219512vw;
-    padding-left: 10.9756097561vw;
-  }
-  .mainvisual .alive_btn {
-    padding-left: 10.9756097561vw;
-  }
+.main-visual {
+  padding-top: 50px;
 }
 
 /* lastest_works

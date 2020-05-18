@@ -3,11 +3,11 @@
         &-list {
             &-item {
                 display: flex;
-                margin-bottom: setByVW(10);
+                margin-bottom: 10px;
                 .info {
-                    padding: 0 setByVW(10);
+                    padding: 0 10px;
                     .date {
-                        @include font-size-vw(12);
+                        font-size: 12px;;
                         line-height: 1;
                     }
                     .ttl {
@@ -15,6 +15,22 @@
                         line-height: 1.3em;
                         text-decoration: underline;
                         color: #0A00FF;
+                    }
+                }
+            }
+        }
+        @include screen ($sp-large) {
+            &-list {
+                &-item {
+                    margin-bottom: setByVW(10);
+                    .info {
+                        padding: 0 setByVW(10);
+                        .date {
+                            @include font-size-vw(12);
+                        }
+                        .ttl {
+                            @include font-size-vw(14);
+                        }
                     }
                 }
             }
