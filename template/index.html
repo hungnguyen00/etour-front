@@ -76,6 +76,44 @@
     <div class="container">
       <div class="search">
         <h2 class="ttl-com">Nơi nào là nơi mà bạn muốn <span>du lịch đến?</span></h2>
+        <div class="search-type">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs search-type-tab-list">
+            <li class="nav-item search-type-tab-list-item">
+              <a class="active" data-toggle="tab" href="#tabDomAir">
+                <div class="dom-air">
+                  <div class="dom-air-icon"><img src="public/images/common/ic_dom_flight.png" alt=""></div>
+                  <p>Vé máy bay trong nước</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item search-type-tab-list-item">
+              <a data-toggle="tab" href="#tabDomHotel">
+                <div class="dom-hotel">
+                  <div class="dom-hotel-icon"><img src="public/images/common/ic_dom_hotel.png" alt=""></div>
+                  <p>Khách sạn trong nước</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item search-type-tab-list-item">
+              <a data-toggle="tab" href="#tabOverseaAir">
+                <div class="oversea-air">
+                  <div class="oversea-air-icon"><img src="public/images/common/ic_oversea_flight.png" alt=""></div>
+                  <p>Vé máy bay quốc tế</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item search-type-tab-list-item">
+              <a data-toggle="tab" href="#tabOverseaHotel">
+                <div class="oversea-hotel">
+                  <div class="oversea-hotel-icon"><img src="public/images/common/ic_oversea_hotel.png" alt=""></div>
+                  <p>Khách sạn quốc tế</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+      
+        </div>
         <div class="content">
           <div class="form-group"><input type="text" class="input departure" placeholder="Điểm khởi hành"></div>
           <div class="form-group"><input type="text" class="input arrival" placeholder="Điểm đến"></div>
@@ -88,7 +126,10 @@
           <div class="form-group">
             <div class="inner">
               <input type="text" class="input passengers" placeholder="Số hành khách">
-              <input type="text" class="input seat-type" placeholder="Hạng mức ghế">
+              <select class="input seat-type">
+                <option selected>Hạng mức ghế</option>
+                <option>hà Nội (HAN)</option>
+              </select>
             </div>
           </div>
           <button class="button">Tìm chuyến bay</button>
