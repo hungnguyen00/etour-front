@@ -6,6 +6,10 @@
             border-radius: setByVW(10);
             display: flex;
             flex-wrap: wrap;
+            .input {
+                @include font-size-vw(17);
+                line-height: 1.35em;
+            }
             .departure {
                 width: 100%;
                 background-image: url('../../images/common/ic_flight_departure.png');
@@ -20,33 +24,40 @@
                 background-position: left;
                 background-position-x: setByVW(10);
             }
-            .dep-date {
-                width: 50%;
-                background-image: url('../../images/common/ic_datepicker.png');
-                background-repeat: no-repeat;
-                background-position: left;
-                background-position-x: setByVW(10);
-            }
-            .arr-date {
-                width: 50%;
-                background-image: url('../../images/common/ic_datepicker.png');
-                background-repeat: no-repeat;
-                background-position: left;
-                background-position-x: setByVW(10);
-            }
-            .passengers {
-                width: 50%;
-                background-image: url('../../images/common/ic_passenger.png');
-                background-repeat: no-repeat;
-                background-position: left;
-                background-position-x: setByVW(10);
-            }
-            .seat-type {
-                width: 50%;
-                background-image: url('../../images/common/ic_seat_type.png');
-                background-repeat: no-repeat;
-                background-position: left;
-                background-position-x: setByVW(10);
+            .inner {
+                display: flex;
+                .dep-date {
+                    width: 50%;
+                    background-image: url('../../images/common/ic_datepicker.png');
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-position-x: setByVW(10);
+                    margin-right: setByVW(5);
+                }
+                .arr-date {
+                    width: 50%;
+                    background-image: url('../../images/common/ic_datepicker.png');
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-position-x: setByVW(10);
+                    margin-left: setByVW(5);
+                }
+                .passengers {
+                    width: 50%;
+                    background-image: url('../../images/common/ic_passenger.png');
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-position-x: setByVW(10);
+                    margin-right: setByVW(5);
+                }
+                .seat-type {
+                    width: 50%;
+                    background-image: url('../../images/common/ic_seat_type.png');
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-position-x: setByVW(10);
+                    margin-left: setByVW(5);
+                }
             }
         }
     }

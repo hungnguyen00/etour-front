@@ -2,7 +2,7 @@
     .cheap-flight {
         .search {
             display: flex;
-            margin-bottom: setByVW(5);
+            margin-bottom: setByVW(20);
             .dep-date {
                 width: 50%;
                 margin: 0 setByVW(10);
@@ -31,7 +31,7 @@
                     width: 100%;
                     background-image: url('../../images/common/ic_arrow_down.png');
                     background-repeat: no-repeat;
-                    background-position: right;
+                    background-position: right setByVW(10) center;
                 }
             }
         }
@@ -39,17 +39,39 @@
             display: flex;
             margin: 0 setByVW(8);
             &-item {
-                flex-basis: 0 0 25%;
+                flex: 1;
                 width: 25%;
+                position: relative;
                 a {
                     color: #A2A2A2;
                     background-color: #F5F5F5;
                     border-top-right-radius: setByVW(40);
                     font-family: $font_source_sans_pro;
+                    border: none;
+                    background: #ccc;
+                    text-align: center;
+                    position: relative;
+                    z-index: 1;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 4px;
+                        width: 50%;
+                        height: 100%;
+                        background-color: #ccc;
+                        transform: skew(15deg);
+                        border-top-right-radius: 5px;
+                    }
+                    
                     &.active {
                         color: #fff;
                         background-color: #44C7B3;
                         font-weight: bold;
+                        &::after {
+                            background-color: #44C7B3;
+                        }
                     }
                 }
             }

@@ -71,14 +71,22 @@
   <section class="section section-search">
     <div class="container">
       <div class="search">
-        <h2 class="ttl-com">Nơi nào là nơi mà bạn muôn <span>du lịch đến?</span></h2>
+        <h2 class="ttl-com">Nơi nào là nơi mà bạn muốn <span>du lịch đến?</span></h2>
         <div class="content">
-          <input type="text" class="input departure">
-          <input type="text" class="input arrival">
-          <input type="text" class="input dep-date">
-          <input type="text" class="input arr-date">
-          <input type="text" class="input passengers">
-          <input type="text" class="input seat-type">
+          <div class="form-group"><input type="text" class="input departure" placeholder="Điểm khởi hành"></div>
+          <div class="form-group"><input type="text" class="input arrival" placeholder="Điểm đến"></div>
+          <div class="form-group">
+            <div class="inner">
+              <input type="text" class="input dep-date" placeholder="Ngày đi">
+              <input type="text" class="input arr-date" placeholder="Ngày về">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="inner">
+              <input type="text" class="input passengers" placeholder="Số hành khách">
+              <input type="text" class="input seat-type" placeholder="Hạng mức ghế">
+            </div>
+          </div>
           <button class="button">Tìm chuyến bay</button>
         </div>
       </div>
@@ -97,7 +105,7 @@
             </div>
             <div class="departure">
               <p>Điểm xuất phát</p>
-              <select class="input">
+              <select class="input without-icon">
                 <option selected>TPHCM (SGN)</option>
                 <option>hà Nội (HAN)</option>
               </select>

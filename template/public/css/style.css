@@ -506,7 +506,10 @@ header.scroll {
   box-shadow: 0px 0px 1.7073170732vw -2px rgba(0, 0, 0, 0.26);
   border-radius: 0.7317073171vw;
   border: none;
-  margin-bottom: 2.4390243902vw;
+  padding-left: 12.1951219512vw;
+}
+.input.without-icon {
+  padding-left: 2.4390243902vw;
 }
 
 .button {
@@ -517,6 +520,10 @@ header.scroll {
   height: 13.4146341463vw;
   color: #FFF;
   font-size: 5.1219512195vw;
+}
+
+.form-group {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
