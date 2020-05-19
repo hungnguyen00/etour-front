@@ -227,10 +227,71 @@
   border-bottom: none;
 }
 
+.section-search .search .search-type {
+  padding: 4.8780487805vw 5.6097560976vw;
+  border: 1px solid #fff;
+  border-radius: 2.4390243902vw;
+  box-shadow: 0px 0px 1.7073170732vw -2px rgba(0, 0, 0, 0.26);
+}
+.section-search .search .search-type-tab-list {
+  display: flex;
+}
+.section-search .search .search-type-tab-list-item {
+  border-radius: 2.4390243902vw;
+  flex: 1;
+  text-align: center;
+}
+.section-search .search .search-type-tab-list-item .dom-air {
+  background-color: #e6fffb;
+  padding: 2.4390243902vw;
+  margin-right: 1.2195121951vw;
+  width: 100%;
+  height: 100%;
+}
+.section-search .search .search-type-tab-list-item .dom-air-icon img {
+  width: 7.8048780488vw;
+  height: 7.8048780488vw;
+}
+.section-search .search .search-type-tab-list-item .dom-hotel {
+  background-color: #ece6ff;
+  padding: 2.4390243902vw;
+  margin-left: 1.2195121951vw;
+  margin-right: 1.4634146341vw;
+  width: 100%;
+  height: 100%;
+}
+.section-search .search .search-type-tab-list-item .dom-hotel-icon img {
+  width: 6.0975609756vw;
+  height: 4.6341463415vw;
+}
+.section-search .search .search-type-tab-list-item .oversea-air {
+  background-color: #fff7e6;
+  padding: 2.4390243902vw;
+  margin-left: 1.4634146341vw;
+  margin-right: 1.2195121951vw;
+  width: 100%;
+  height: 100%;
+}
+.section-search .search .search-type-tab-list-item .oversea-air-icon img {
+  width: 8.5365853659vw;
+  height: 7.8048780488vw;
+}
+.section-search .search .search-type-tab-list-item .oversea-hotel {
+  background-color: #e6ffe9;
+  padding: 2.4390243902vw;
+  margin-left: 1.2195121951vw;
+  width: 100%;
+  height: 100%;
+}
+.section-search .search .search-type-tab-list-item .oversea-hotel-icon img {
+  width: 8.5365853659vw;
+  height: 6.3414634146vw;
+}
 .section-search .search .content {
   padding: 2.4390243902vw;
   border: 1px solid #44C7B3;
   border-radius: 2.4390243902vw;
+  box-shadow: 0px 0px 1.7073170732vw -2px rgba(0, 0, 0, 0.26);
   display: flex;
   flex-wrap: wrap;
 }
@@ -240,17 +301,17 @@
 }
 .section-search .search .content .departure {
   width: 100%;
-  background-image: url("../../images/common/ic_flight_departure.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-position-x: 2.4390243902vw;
+  background-image: url("../../images/common/ic_flight_departure.png"), url("../../images/common/ic_arrow_up_down.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 2.4390243902vw, right 2.4390243902vw center;
+  background-size: 4.8780487805vw 4.1463414634vw, contain;
 }
 .section-search .search .content .arrival {
   width: 100%;
   background-image: url("../../images/common/ic_flight_arrival.png");
   background-repeat: no-repeat;
-  background-position: left;
-  background-position-x: 2.4390243902vw;
+  background-position: 2.4390243902vw;
+  background-size: 4.6341463415vw 4.6341463415vw;
 }
 .section-search .search .content .inner {
   display: flex;
@@ -259,33 +320,33 @@
   width: 50%;
   background-image: url("../../images/common/ic_datepicker.png");
   background-repeat: no-repeat;
-  background-position: left;
-  background-position-x: 2.4390243902vw;
-  margin-right: 1.2195121951vw;
+  background-position: 2.4390243902vw;
+  background-size: 4.3902439024vw 4.8780487805vw;
+  margin-right: 2.4390243902vw;
 }
 .section-search .search .content .inner .arr-date {
   width: 50%;
   background-image: url("../../images/common/ic_datepicker.png");
   background-repeat: no-repeat;
-  background-position: left;
-  background-position-x: 2.4390243902vw;
-  margin-left: 1.2195121951vw;
+  background-position: 2.4390243902vw;
+  background-size: 4.3902439024vw 4.8780487805vw;
+  margin-left: 2.4390243902vw;
 }
 .section-search .search .content .inner .passengers {
   width: 50%;
   background-image: url("../../images/common/ic_passenger.png");
   background-repeat: no-repeat;
-  background-position: left;
-  background-position-x: 2.4390243902vw;
-  margin-right: 1.2195121951vw;
+  background-position: 2.4390243902vw;
+  background-size: 4.6341463415vw 3.4146341463vw;
+  margin-right: 2.4390243902vw;
 }
 .section-search .search .content .inner .seat-type {
   width: 50%;
-  background-image: url("../../images/common/ic_seat_type.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-position-x: 2.4390243902vw;
-  margin-left: 1.2195121951vw;
+  background-image: url("../../images/common/ic_seat_type.png"), url("../../images/common/ic_arrow_down.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 2.4390243902vw, right 2.4390243902vw center;
+  background-size: 3.9024390244vw 4.8780487805vw, 2.4390243902vw 1.4634146341vw;
+  margin-left: 2.4390243902vw;
 }
 
 .main-visual {
