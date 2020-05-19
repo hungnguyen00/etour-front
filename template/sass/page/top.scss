@@ -6,7 +6,13 @@
 @import "../components/search-box";
 $path_images: '../../images/top';
 .main-visual {
-    padding-top: 50px;
+    padding: 50px 0 0;
+    img {
+        width: 100%;
+    }
+    @include screen ($sp-large) {
+        padding: setByVW(50) 0 0;
+    }
     
 }
 

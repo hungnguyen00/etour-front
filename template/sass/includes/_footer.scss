@@ -5,6 +5,7 @@ $path_images: '../../public/images/common/';
     padding: 25px 30px;
     text-align: center;
     font-size: 10px;
+    margin-top: 10px;
     .inner {
         .logo {
             img {
@@ -19,6 +20,10 @@ $path_images: '../../public/images/common/';
                 margin: 0 20px;
                 a {
                     display: block;
+                    width: 40px;
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -31,6 +36,7 @@ $path_images: '../../public/images/common/';
     }
     @include screen ($sp-large) {
         padding: setByVW(25) 0 setByVW(30);
+        margin-top: setByVW(10);
         .inner {
             .logo {
                 img {
@@ -40,7 +46,10 @@ $path_images: '../../public/images/common/';
             .sns {
                 margin-top: setByVW(25);
                 li {
-                    margin: 0 setByVW(20);
+                    margin: 0 setByVW(10);
+                    a {
+                        width: setByVW(40);
+                    }
                 }
             }
             .copyright {

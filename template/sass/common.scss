@@ -1,49 +1,7 @@
 @import "./config/const";
 @import "./includes/func";
-.block_section {
-    padding: 100px 0;
-    @include screen ($ipad) {
-        padding: 70px 0;
-    }
-    @include screen ($sp-large) {
-        padding: setByVW(100) 0;
-    } 
-}
-.alive_btn {
-    a {
-        align-items: center; 
-        background: transparent;
-        color: #fff;
-        display: flex; 
-        font-size: 18px; 
-        font-weight: bold;
-        justify-content: center;
-        line-height: 1.4;
-        text-align: center;
-        text-decoration: none;
-        border: 2px solid #555654; 
-        max-width: 300px;
-        height: 65px;
-        transition: 0.3s ease all;
-        position: relative;
-        &:hover {
-            background-color: #8fda00;
-            border: #8fda00;
-            color: #fff;
-        }
-    }
-    @include screen ($sp-large) {
-        a {
-            max-width: setByVW(350);
-            height: setByVW(90);
-            @include font-size-vw(20);
-            letter-spacing: setByVW(4);
-        }
-    }
-}
-
-#main {
-    margin: 0 10px;
+.section {
+    padding: 0 10px;
 }
 
 .notice-num {
@@ -82,6 +40,51 @@
     padding-left: 0;
     padding-right: 0;
 }
+
+// Slick button prev, next
+/*-----------------*/
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    
+    background: transparent;
+    z-index: 99;
+    &:before {
+        border: solid #69d2c2;
+        border-style: solid;
+        border-width: 0 4px 4px 0;
+        padding: 9px;
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        content: "";
+        outline: none;
+    }
+}
+
+.slick-prev {
+    left: 15px;
+    &:before {
+        transform: rotate(135deg)
+    }
+}
+.slick-next {
+    right: 35px;
+    &:before {        
+        transform: rotate(-45deg);
+    }
+}
+
 .input {
     height: setByVW(50);
     box-shadow: 0px 0px setByVW(7) -2px rgba(0,0,0,0.26);

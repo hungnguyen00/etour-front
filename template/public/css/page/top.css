@@ -86,6 +86,9 @@
   display: flex;
   margin-bottom: 10px;
 }
+.section-news .news-list-item .thumb-logo img {
+  width: 80px;
+}
 .section-news .news-list-item .info {
   padding: 0 10px;
 }
@@ -105,6 +108,13 @@
 @media screen and (max-width: 767px) {
   .section-news .news-list-item {
     margin-bottom: 2.4390243902vw;
+  }
+  .section-news .news-list-item .thumb-logo {
+    flex: 0 0 14.6341463415vw;
+    width: 14.6341463415vw;
+  }
+  .section-news .news-list-item .thumb-logo img {
+    width: 100%;
   }
   .section-news .news-list-item .info {
     padding: 0 2.4390243902vw;
@@ -129,6 +139,7 @@
   font-family: "Source Sans Pro", sans-serif;
   font-size: 3.6585365854vw;
   margin-bottom: 1.2195121951vw;
+  font-weight: bold;
 }
 .section-cheap-flight .cheap-flight .search .dep-date .input {
   width: 100%;
@@ -145,6 +156,7 @@
   font-family: "Source Sans Pro", sans-serif;
   font-size: 3.6585365854vw;
   margin-bottom: 1.2195121951vw;
+  font-weight: bold;
 }
 .section-cheap-flight .cheap-flight .search .departure .input {
   width: 100%;
@@ -157,35 +169,48 @@
   margin: 0 1.9512195122vw;
 }
 .section-cheap-flight .cheap-flight-tab-list-item {
-  flex: 1;
+  flex: 0 0 24%;
   width: 25%;
+  margin-right: 2px;
   position: relative;
 }
 .section-cheap-flight .cheap-flight-tab-list-item a {
-  color: #A2A2A2;
-  background-color: #F5F5F5;
   border-top-right-radius: 9.756097561vw;
-  font-family: "Source Sans Pro", sans-serif;
-  border: none;
-  background: #ccc;
-  text-align: center;
+  border-top-left-radius: 8px;
   position: relative;
   z-index: 1;
+  background-color: #efeeee;
+  padding: 7px 7px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.section-cheap-flight .cheap-flight-tab-list-item a span {
+  color: #A2A2A2;
+  font-family: "Source Sans Pro", sans-serif;
+  border: none;
+  text-align: center;
+  position: relative;
+  z-index: 9;
 }
 .section-cheap-flight .cheap-flight-tab-list-item a::after {
   content: "";
   position: absolute;
   top: 0;
-  right: 4px;
+  right: 2px;
   width: 50%;
   height: 100%;
-  background-color: #ccc;
+  background-color: #efeeee;
   transform: skew(15deg);
   border-top-right-radius: 5px;
 }
 .section-cheap-flight .cheap-flight-tab-list-item a.active {
-  color: #fff;
   background-color: #44C7B3;
+  position: relative;
+  z-index: 9;
+}
+.section-cheap-flight .cheap-flight-tab-list-item a.active span {
+  color: #fff;
   font-weight: bold;
 }
 .section-cheap-flight .cheap-flight-tab-list-item a.active::after {
@@ -195,6 +220,10 @@
   border-radius: 2.4390243902vw;
   overflow: hidden;
   border: 1px solid #44C7B3;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 9;
+  margin-top: -1px;
 }
 .section-cheap-flight .cheap-flight .tab-content .inner table {
   width: 100%;
@@ -289,7 +318,15 @@
 }
 
 .main-visual {
-  padding-top: 50px;
+  padding: 50px 0 0;
+}
+.main-visual img {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .main-visual {
+    padding: 12.1951219512vw 0 0;
+  }
 }
 
 /* lastest_works

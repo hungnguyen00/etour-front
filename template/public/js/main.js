@@ -1,14 +1,16 @@
-function sliderWorks(name) {
-  $("." + name).slick({   
-      dots: false,
-      arrows: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-  });
-}
+// function sliderWorks(name) {
+//   $("." + name).slick({   
+//       dots: false,
+//       arrows: true,
+//       infinite: true,
+//       slidesToShow: 3,
+//       slidesToScroll: 1,
+//   });
+// }
 
 
+// fixHeader 
+// ---------------------------------------
 function fixHeader() {
   $(window).scroll(function() {
     if($(window).scrollTop() <= 20) {
@@ -21,11 +23,14 @@ function fixHeader() {
 
 $(document).ready(function(){   
   fixHeader();
-  sliderWorks('slider_tab01');
-  sliderWorks('slider_tab02');
-  sliderWorks('slider_tab03');
-  sliderWorks('slider_tab04');
+  // sliderWorks('slider_tab01');
+  // sliderWorks('slider_tab02');
+  // sliderWorks('slider_tab03');
+  // sliderWorks('slider_tab04');
 
+  // mv-slick 
+  // ---------------------------------------
+  $('.mv-slick').slick();
   // tab 
   // ---------------------------------------
   $(function() {

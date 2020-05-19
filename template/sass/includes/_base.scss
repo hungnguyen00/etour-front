@@ -126,6 +126,12 @@ ul, dl, ol {
     overflow: hidden;
   }
   
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
 
 /* ========================================
     ■ Button style

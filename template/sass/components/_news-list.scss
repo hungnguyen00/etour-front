@@ -4,6 +4,11 @@
             &-item {
                 display: flex;
                 margin-bottom: 10px;
+                .thumb-logo {                    
+                    img {
+                        width: 80px;
+                    }
+                }
                 .info {
                     padding: 0 10px;
                     .date {
@@ -23,6 +28,13 @@
             &-list {
                 &-item {
                     margin-bottom: setByVW(10);
+                    .thumb-logo {        
+                        flex: 0 0 setByVW(60);
+                        width: setByVW(60);            
+                        img {
+                            width: 100%;
+                        }
+                    }
                     .info {
                         padding: 0 setByVW(10);
                         .date {
