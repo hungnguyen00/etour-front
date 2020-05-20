@@ -175,7 +175,7 @@
   position: relative;
 }
 .section-cheap-flight .cheap-flight-tab-list-item a {
-  border-top-right-radius: 9.756097561vw;
+  border-top-right-radius: 40px;
   border-top-left-radius: 8px;
   position: relative;
   z-index: 1;
@@ -216,14 +216,29 @@
 .section-cheap-flight .cheap-flight-tab-list-item a.active::after {
   background-color: #44C7B3;
 }
+@media screen and (max-width: 767px) {
+  .section-cheap-flight .cheap-flight-tab-list {
+    margin: 0 1.9512195122vw;
+  }
+  .section-cheap-flight .cheap-flight-tab-list-item a {
+    border-top-right-radius: 9.756097561vw;
+    padding: 1.7073170732vw 1.7073170732vw;
+    font-size: 3.4146341463vw;
+  }
+}
 .section-cheap-flight .cheap-flight .tab-content .inner {
-  border-radius: 2.4390243902vw;
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid #44C7B3;
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 9;
-  margin-top: -1px;
+  margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+  .section-cheap-flight .cheap-flight .tab-content .inner {
+    border-radius: 2.4390243902vw;
+  }
 }
 .section-cheap-flight .cheap-flight .tab-content .inner table {
   width: 100%;
@@ -231,29 +246,124 @@
 .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr {
   border-bottom: none;
 }
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr:last-child td {
+  border-bottom: none;
+}
 .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td {
   border-right: 1px solid #44C7B3;
   border-bottom: 1px solid #44C7B3;
-  padding: 1.2195121951vw 2.4390243902vw;
+  padding: 8px 10px;
+  line-height: 1.6em;
 }
 .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td:last-child {
   border-right: none;
 }
-.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .arrival {
-  line-height: 1.4em;
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box {
+  position: relative;
+  padding-left: 20px;
 }
-.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .duration {
-  line-height: 1.4em;
-  margin: 0.9756097561vw 0;
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box::before {
+  content: "";
+  height: 48%;
+  border-left: 0.17rem dashed #ccc;
+  position: absolute;
+  left: 7px;
+  top: 17px;
+}
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .arrival {
+  position: relative;
+}
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .arrival::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 6px;
+  width: 0;
+  height: 0;
+  border-left: 4.5px solid transparent;
+  border-right: 4.5px solid transparent;
+  border-bottom: 7px solid #44c7b3;
+}
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .duration {
+  margin: 4px 0;
+  position: relative;
+}
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .duration::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 8px;
+  width: 0;
+  height: 0;
+  border-left: 4.5px solid transparent;
+  border-right: 4.5px solid transparent;
+  border-top: 7px solid #6452e2;
 }
 .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .price {
-  font-size: 3.6585365854vw;
+  display: flex;
+}
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .price::before {
+  content: "";
+  background: url(../../images/common/ic_price.png) 0 0 no-repeat;
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
+  margin-right: 4px;
+}
+.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .price p {
+  font-size: 15px;
   color: #FF883E;
   font-weight: bold;
   line-height: 1.35em;
 }
-.section-cheap-flight .cheap-flight .tab-content .inner table tbody tr:last-child td {
-  border-bottom: none;
+@media screen and (max-width: 767px) {
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td {
+    padding: 1.2195121951vw 2.4390243902vw;
+    line-height: 5.3658536585vw;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td:last-child {
+    border-right: none;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box {
+    padding-left: 4.8780487805vw;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box::before {
+    height: 48%;
+    left: 1.9512195122vw;
+    top: 4.1463414634vw;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .arrival::before {
+    left: -3.9024390244vw;
+    top: 1.4634146341vw;
+    border-left: 1.0975609756vw solid transparent;
+    border-right: 1.0975609756vw solid transparent;
+    border-bottom: 1.7073170732vw solid #44c7b3;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .arrival p {
+    font-size: 3.4146341463vw;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .duration {
+    margin: 0.9756097561vw 0;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .duration::before {
+    left: -3.9024390244vw;
+    top: 1.9512195122vw;
+    border-left: 1.0975609756vw solid transparent;
+    border-right: 1.0975609756vw solid transparent;
+    border-top: 1.7073170732vw solid #6452e2;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .group-box .duration p {
+    font-size: 3.4146341463vw;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .price::before {
+    width: 3.9024390244vw;
+    height: 3.9024390244vw;
+    background-size: 3.9024390244vw;
+    margin-right: 0.9756097561vw;
+  }
+  .section-cheap-flight .cheap-flight .tab-content .inner table tbody tr td .price p {
+    font-size: 3.6585365854vw;
+  }
 }
 
 .section-search .search .search-type {

@@ -1,12 +1,41 @@
 
 $path_images: '../../public/images/common/';
 .footer {
-    background-image: linear-gradient(to bottom, #b7f8ee, #6ccebf 88%);
-    padding: 25px 30px;
+    background-image: linear-gradient(to bottom, #6ccebf, #b7f8ee 88%);
+    padding: 0 30px 0;
     text-align: center;
     font-size: 10px;
-    margin-top: 10px;
-    .inner {
+    margin-top: 60px;
+    position: relative;
+    &::before {
+        content: '';
+        width: 112%;
+        height: 60%;
+        background: #6ccebf;
+        border-radius: 50%/50%;
+        position: absolute;
+        left: 50%;
+        top: -16%;
+        z-index: -1;
+        transform: translateX(-50%);
+    }
+    .container {
+        position: relative;
+        padding-bottom: 30px;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url(#{$path_images}bg_footer.png) center bottom no-repeat;
+            background-size: 95%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .inner {  
+        position: relative;
+        z-index: 9;      
         .logo {
             img {
                 width: 40px;
@@ -35,8 +64,8 @@ $path_images: '../../public/images/common/';
         }
     }
     @include screen ($sp-large) {
-        padding: setByVW(25) 0 setByVW(30);
-        margin-top: setByVW(10);
+        padding: setByVW(0) 0 setByVW(0);
+        margin-top: setByVW(60);
         .inner {
             .logo {
                 img {
