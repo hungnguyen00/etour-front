@@ -25,11 +25,8 @@
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="public/css/page/top.css">
   <link rel="stylesheet" href="public/css/slick/slick.min.css">
-  
-
 </head>
 <body>
-
 <header class="header">
   <div class="container">
     <div class="inner">
@@ -78,9 +75,9 @@
         <h2 class="ttl-com">Nơi nào là nơi mà bạn muốn <span>du lịch đến?</span></h2>
         <div class="search-type">
           <!-- Nav tabs -->
-          <ul class="nav nav-tabs search-type-tab-list">
+          <ul class="nav search-type-tab-list">
             <li class="nav-item search-type-tab-list-item">
-              <a class="active" data-toggle="tab" href="#tabDomAir">
+              <a class="active" data-toggle="tab" href="#tabSearchDomAir">
                 <div class="dom-air">
                   <div class="dom-air-icon"><img src="public/images/common/ic_dom_flight.png" alt=""></div>
                   <p>Vé máy bay trong nước</p>
@@ -88,7 +85,7 @@
               </a>
             </li>
             <li class="nav-item search-type-tab-list-item">
-              <a data-toggle="tab" href="#tabDomHotel">
+              <a data-toggle="tab" href="#tabSearchDomHotel">
                 <div class="dom-hotel">
                   <div class="dom-hotel-icon"><img src="public/images/common/ic_dom_hotel.png" alt=""></div>
                   <p>Khách sạn trong nước</p>
@@ -96,7 +93,7 @@
               </a>
             </li>
             <li class="nav-item search-type-tab-list-item">
-              <a data-toggle="tab" href="#tabOverseaAir">
+              <a data-toggle="tab" href="#tabSearchOverseaAir">
                 <div class="oversea-air">
                   <div class="oversea-air-icon"><img src="public/images/common/ic_oversea_flight.png" alt=""></div>
                   <p>Vé máy bay quốc tế</p>
@@ -104,7 +101,7 @@
               </a>
             </li>
             <li class="nav-item search-type-tab-list-item">
-              <a data-toggle="tab" href="#tabOverseaHotel">
+              <a data-toggle="tab" href="#tabSearchOverseaHotel">
                 <div class="oversea-hotel">
                   <div class="oversea-hotel-icon"><img src="public/images/common/ic_oversea_hotel.png" alt=""></div>
                   <p>Khách sạn quốc tế</p>
@@ -112,32 +109,127 @@
               </a>
             </li>
           </ul>
-      
         </div>
-        <div class="content">
-          <div class="form-group"><input type="text" class="input departure" placeholder="Điểm khởi hành"></div>
-          <div class="form-group"><input type="text" class="input arrival" placeholder="Điểm đến"></div>
-          <div class="form-group">
-            <div class="inner">
-              <input type="text" class="input dep-date" placeholder="Ngày đi">
-              <input type="text" class="input arr-date" placeholder="Ngày về">
+        <div class="tab-content">
+          <div id="tabSearchDomAir" class="tab-pane active">
+            <div class="arrow">
+            <div class="arrow-border"><span class="arrow-down dom-air"></span></div>
+            <div class="arrow-border"></div>
+            <div class="arrow-border"></div>
+            <div class="arrow-border"></div>
+          </div>
+            <div class="content">
+              <div class="form-group"><input type="text" class="input departure" placeholder="Điểm khởi hành"></div>
+              <div class="form-group"><input type="text" class="input arrival" placeholder="Điểm đến"></div>
+              <div class="form-group">
+                <div class="inner">
+                  <input type="text" class="input dep-date" placeholder="Ngày đi">
+                  <input type="text" class="input arr-date" placeholder="Ngày về">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="inner">
+                  <input type="text" class="input passengers" placeholder="Số hành khách">
+                  <select class="input seat-type">
+                    <option selected>Hạng mức ghế</option>
+                    <option>hà Nội (HAN)</option>
+                  </select>
+                </div>
+              </div>
+              <button class="button">Tìm chuyến bay</button>
             </div>
           </div>
-          <div class="form-group">
-            <div class="inner">
-              <input type="text" class="input passengers" placeholder="Số hành khách">
-              <select class="input seat-type">
-                <option selected>Hạng mức ghế</option>
-                <option>hà Nội (HAN)</option>
-              </select>
+          <div id="tabSearchDomHotel" class="tab-pane">
+            <div class="arrow">
+            <div class="arrow-border"></div>
+            <div class="arrow-border"><span class="arrow-down dom-hotel"></span></div>
+            <div class="arrow-border"></div>
+            <div class="arrow-border"></div>
+          </div>
+            <div class="content">
+              <div class="form-group"><input type="text" class="input departure" placeholder="Điểm khởi hành"></div>
+              <div class="form-group"><input type="text" class="input arrival" placeholder="Điểm đến"></div>
+              <div class="form-group">
+                <div class="inner">
+                  <input type="text" class="input dep-date" placeholder="Ngày đi">
+                  <input type="text" class="input arr-date" placeholder="Ngày về">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="inner">
+                  <input type="text" class="input passengers" placeholder="Số hành khách">
+                  <select class="input seat-type">
+                    <option selected>Hạng mức ghế</option>
+                    <option>hà Nội (HAN)</option>
+                  </select>
+                </div>
+              </div>
+              <button class="button">Tìm chuyến bay</button>
             </div>
           </div>
-          <button class="button">Tìm chuyến bay</button>
+          <div id="tabSearchOverseaAir" class="tab-pane">
+            <div class="arrow">
+            <div class="arrow-border"></div>
+            <div class="arrow-border"></div>
+            <div class="arrow-border"><span class="arrow-down oversea-air"></span></div>
+            <div class="arrow-border"></div>
+          </div>
+            <div class="content">
+              <div class="form-group"><input type="text" class="input departure" placeholder="Điểm khởi hành"></div>
+              <div class="form-group"><input type="text" class="input arrival" placeholder="Điểm đến"></div>
+              <div class="form-group">
+                <div class="inner">
+                  <input type="text" class="input dep-date" placeholder="Ngày đi">
+                  <input type="text" class="input arr-date" placeholder="Ngày về">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="inner">
+                  <input type="text" class="input passengers" placeholder="Số hành khách">
+                  <select class="input seat-type">
+                    <option selected>Hạng mức ghế</option>
+                    <option>hà Nội (HAN)</option>
+                  </select>
+                </div>
+              </div>
+              <button class="button">Tìm chuyến bay</button>
+            </div>
+          </div>
+          <div id="tabSearchOverseaHotel" class="tab-pane">
+            <div class="arrow">
+            <div class="arrow-border"></div>
+            <div class="arrow-border"></div>
+            <div class="arrow-border"></div>
+            <div class="arrow-border"><span class="arrow-down oversea-hotel"></span></div>
+          </div>
+            <div class="content">
+              <div class="form-group"><input type="text" class="input departure" placeholder="Điểm khởi hành"></div>
+              <div class="form-group"><input type="text" class="input arrival" placeholder="Điểm đến"></div>
+              <div class="form-group">
+                <div class="inner">
+                  <input type="text" class="input dep-date" placeholder="Ngày đi">
+                  <input type="text" class="input arr-date" placeholder="Ngày về">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="inner">
+                  <input type="text" class="input passengers" placeholder="Số hành khách">
+                  <select class="input seat-type">
+                    <option selected>Hạng mức ghế</option>
+                    <option>hà Nội (HAN)</option>
+                  </select>
+                </div>
+              </div>
+              <button class="button">Tìm chuyến bay</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  <section class="section supplier"></section>
+  </section><!-- .section-search -->
+  <section class="section section-supplier">
+
+  </section><!-- .section-supplier -->
   <section class="section section-cheap-flight">
     <div class="container">
       <div class="cheap-flight">
@@ -157,7 +249,7 @@
             </div>
           </div>
           <!-- Nav tabs -->
-          <ul class="nav nav-tabs cheap-flight-tab-list">
+          <ul class="nav cheap-flight-tab-list">
             <li class="nav-item cheap-flight-tab-list-item">
               <a class="nav-link active" data-toggle="tab" href="#tabDomAir"><span>Vé máy bay quốc tế</span></a>
             </li>
@@ -234,7 +326,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section><!-- .section-cheap-flight -->
   <section class="section section-blog">
     <div class="container">
       <div class="blog content">
