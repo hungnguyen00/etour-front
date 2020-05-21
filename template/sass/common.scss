@@ -55,10 +55,11 @@
     transform: translate(0, -50%);
     cursor: pointer;
     color: transparent;
-    border: none;
-    
+    border: none;    
     background: transparent;
     z-index: 99;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     &:before {
         border: solid #69d2c2;
         border-style: solid;
@@ -69,6 +70,19 @@
         margin-top: -10px;
         content: "";
         outline: none;
+    }
+    &:hover, &:focus {
+        color: transparent;
+        outline: none;
+        background: transparent;
+        &::before {
+            opacity: 1;
+        }
+    }
+    &.slick-disabled {
+        &::before {
+            opacity: .5;
+        }
     }
 }
 

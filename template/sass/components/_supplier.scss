@@ -1,0 +1,46 @@
+.section-supplier {
+  .supplier {    
+    &-list {
+      display: flex;
+      justify-content: center;
+      margin-top: -10px;
+      &-item {
+        padding: 12px 10px;
+        .box {
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: 0 0 15px 0 rgba(118, 118, 118, 0.2);
+          background-color: #ffffff;
+          padding: 0 10px 8px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          .thumb {
+            width: 120px;
+            img {
+              width: 100%;
+            }
+          }
+          .des {
+            color: #0f0a0a;
+            line-height: 1.2em;
+            text-align: center;
+          }
+        }
+      }      
+    }
+    &-slider {
+      .slick-prev, .slick-next {
+        &:before {
+          padding: 8px;
+        }
+      }
+      .slick-prev {
+          left: 5px;
+      }
+      .slick-next {
+          right: 25px;
+      }
+    }
+  }
+}

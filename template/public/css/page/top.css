@@ -365,6 +365,12 @@
     font-size: 3.6585365854vw;
   }
 }
+.section-cheap-flight .cheap-flight-slider .slick-prev {
+  left: 5px;
+}
+.section-cheap-flight .cheap-flight-slider .slick-next {
+  right: 27px;
+}
 
 .section-search .search .search-type {
   padding: 3.6585365854vw 4.3902439024vw;
@@ -526,6 +532,45 @@
 }
 .section-search .search .arrow-border .arrow-down.oversea-hotel {
   border-color: #22CE56 transparent;
+}
+
+.section-supplier .supplier-list {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+}
+.section-supplier .supplier-list-item {
+  padding: 12px 10px;
+}
+.section-supplier .supplier-list-item .box {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 rgba(118, 118, 118, 0.2);
+  background-color: #ffffff;
+  padding: 0 10px 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.section-supplier .supplier-list-item .box .thumb {
+  width: 120px;
+}
+.section-supplier .supplier-list-item .box .thumb img {
+  width: 100%;
+}
+.section-supplier .supplier-list-item .box .des {
+  color: #0f0a0a;
+  line-height: 1.2em;
+  text-align: center;
+}
+.section-supplier .supplier-slider .slick-prev:before, .section-supplier .supplier-slider .slick-next:before {
+  padding: 8px;
+}
+.section-supplier .supplier-slider .slick-prev {
+  left: 5px;
+}
+.section-supplier .supplier-slider .slick-next {
+  right: 25px;
 }
 
 .main-visual {

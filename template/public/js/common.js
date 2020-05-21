@@ -10,9 +10,38 @@ function fixHeader() {
   });
 }
 
+// sliderCheapFlight 
+// ---------------------------------------
+function sliderCheapFlight(name) {
+  $("." + name).slick({   
+      dots: false,
+      arrows: true,
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+  });
+}
+
+function sliderSupplier(name) {
+  $("." + name).slick({   
+      dots: false,
+      arrows: true,
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+  });
+}
+
+
 $(document).ready(function(){   
   fixHeader();
+  sliderCheapFlight('cheap-flight-slider');
+  sliderSupplier('supplier-slider');
 
+  // switch tab
+  $('.cheap-flight-tab-list a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    $('.cheap-flight-slider').slick('setPosition');
+  })
   // mv-slick 
   // ---------------------------------------
   $('.mv-slick').slick();
