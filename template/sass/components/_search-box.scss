@@ -126,64 +126,71 @@
                 }
             }
         }
-        .content {
-            padding: setByVW(10);
-            border: 1px solid #44C7B3;
-            border-radius: setByVW(10);
-            box-shadow: 0px 0px setByVW(7) -2px rgba(0,0,0,0.26);
-            display: flex;
-            flex-wrap: wrap;
-            .input {
-                @include font-size-vw(17);
-                line-height: 1.35em;
-            }
-            .departure {
-                width: 100%;
-                background-image: url('../../images/common/ic_flight_departure.png'), url('../../images/common/ic_arrow_up_down.png');
-                background-repeat: no-repeat, no-repeat;
-                background-position: setByVW(10), right setByVW(10) center;
-                background-size: setByVW(20) setByVW(17), contain;
-            }
-            .arrival {
-                width: 100%;
-                background-image: url('../../images/common/ic_flight_arrival.png');
-                background-repeat: no-repeat;
-                background-position: setByVW(10);
-                background-size: setByVW(19) setByVW(19);
-            }
-            .inner {
+        .tab-content {
+            .content {
+                padding: setByVW(10);
+                border: 1px solid #44C7B3;
+                border-radius: setByVW(10);
+                box-shadow: 0px 0px setByVW(7) -2px rgba(0,0,0,0.26);
                 display: flex;
-                .dep-date {
-                    width: 50%;
-                    background-image: url('../../images/common/ic_datepicker.png');
-                    background-repeat: no-repeat;
-                    background-position: setByVW(10);
-                    background-size: setByVW(18) setByVW(20);
-                    margin-right: setByVW(10);
+                flex-wrap: wrap;
+                .input {
+                    @include font-size-vw(17);
+                    line-height: 1.35em;
                 }
-                .arr-date {
-                    width: 50%;
-                    background-image: url('../../images/common/ic_datepicker.png');
-                    background-repeat: no-repeat;
-                    background-position: setByVW(10);
-                    background-size: setByVW(18) setByVW(20);
-                    margin-left: setByVW(10);
-                }
-                .passengers {
-                    width: 50%;
-                    background-image: url('../../images/common/ic_passenger.png');
-                    background-repeat: no-repeat;
-                    background-position: setByVW(10);
-                    background-size: setByVW(19) setByVW(14);
-                    margin-right: setByVW(10);
-                }
-                .seat-type {
-                    width: 50%;
-                    background-image: url('../../images/common/ic_seat_type.png'), url('../../images/common/ic_arrow_down.png');
+                .departure {
+                    width: 100%;
+                    background-image: url(#{$path_images_common}/ic_flight_departure.png), url(#{$path_images_common}/ic_arrow_up_down.png);
                     background-repeat: no-repeat, no-repeat;
                     background-position: setByVW(10), right setByVW(10) center;
-                    background-size: setByVW(16) setByVW(20), setByVW(10) setByVW(6);
-                    margin-left: setByVW(10);
+                    background-size: setByVW(20) setByVW(17), contain;
+                }
+                .arrival {
+                    width: 100%;
+                    background-image: url(#{$path_images_common}/ic_flight_arrival.png);
+                    background-repeat: no-repeat;
+                    background-position: setByVW(10);
+                    background-size: setByVW(19) setByVW(19);
+                }
+                .inner {
+                    display: flex;
+                    .dep-date {
+                        width: 50%;
+                        background-image: url(#{$path_images_common}/ic_datepicker.png);
+                        background-repeat: no-repeat;
+                        background-position: setByVW(10);
+                        background-size: setByVW(18) setByVW(20);
+                        margin-right: setByVW(10);
+                    }
+                    .arr-date {
+                        width: 50%;
+                        background-image: url(#{$path_images_common}/ic_datepicker.png);
+                        background-repeat: no-repeat;
+                        background-position: setByVW(10);
+                        background-size: setByVW(18) setByVW(20);
+                        margin-left: setByVW(10);
+                    }
+                    .passengers {
+                        width: 50%;
+                        background-image: url(#{$path_images_common}/ic_passenger.png);
+                        background-repeat: no-repeat;
+                        background-position: setByVW(10);
+                        background-size: setByVW(19) setByVW(14);
+                        margin-right: setByVW(10);
+                    }
+                    .seat-type {
+                        width: 50%;
+                        background-image: url(#{$path_images_common}/ic_seat_type.png), url(#{$path_images_common}/ic_arrow_down.png);
+                        background-repeat: no-repeat, no-repeat;
+                        background-position: setByVW(10), right setByVW(10) center;
+                        background-size: setByVW(16) setByVW(20), setByVW(10) setByVW(6);
+                        margin-left: setByVW(10);
+                    }
+                }
+            }
+            #tabSearchDomAir {
+                .content {
+                    border: 1px solid #44C7B3;
                 }
             }
         }

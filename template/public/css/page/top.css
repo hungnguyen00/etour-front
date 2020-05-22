@@ -470,7 +470,7 @@
   font-family: "Source Sans Pro", sans-serif;
   font-size: 3.1707317073vw;
 }
-.section-search .search .content {
+.section-search .search .tab-content .content {
   padding: 2.4390243902vw;
   border: 1px solid #44C7B3;
   border-radius: 2.4390243902vw;
@@ -478,58 +478,61 @@
   display: flex;
   flex-wrap: wrap;
 }
-.section-search .search .content .input {
+.section-search .search .tab-content .content .input {
   font-size: 4.1463414634vw;
   line-height: 1.35em;
 }
-.section-search .search .content .departure {
+.section-search .search .tab-content .content .departure {
   width: 100%;
-  background-image: url("../../images/common/ic_flight_departure.png"), url("../../images/common/ic_arrow_up_down.png");
+  background-image: url(../../images/common/ic_flight_departure.png), url(../../images/common/ic_arrow_up_down.png);
   background-repeat: no-repeat, no-repeat;
   background-position: 2.4390243902vw, right 2.4390243902vw center;
   background-size: 4.8780487805vw 4.1463414634vw, contain;
 }
-.section-search .search .content .arrival {
+.section-search .search .tab-content .content .arrival {
   width: 100%;
-  background-image: url("../../images/common/ic_flight_arrival.png");
+  background-image: url(../../images/common/ic_flight_arrival.png);
   background-repeat: no-repeat;
   background-position: 2.4390243902vw;
   background-size: 4.6341463415vw 4.6341463415vw;
 }
-.section-search .search .content .inner {
+.section-search .search .tab-content .content .inner {
   display: flex;
 }
-.section-search .search .content .inner .dep-date {
+.section-search .search .tab-content .content .inner .dep-date {
   width: 50%;
-  background-image: url("../../images/common/ic_datepicker.png");
+  background-image: url(../../images/common/ic_datepicker.png);
   background-repeat: no-repeat;
   background-position: 2.4390243902vw;
   background-size: 4.3902439024vw 4.8780487805vw;
   margin-right: 2.4390243902vw;
 }
-.section-search .search .content .inner .arr-date {
+.section-search .search .tab-content .content .inner .arr-date {
   width: 50%;
-  background-image: url("../../images/common/ic_datepicker.png");
+  background-image: url(../../images/common/ic_datepicker.png);
   background-repeat: no-repeat;
   background-position: 2.4390243902vw;
   background-size: 4.3902439024vw 4.8780487805vw;
   margin-left: 2.4390243902vw;
 }
-.section-search .search .content .inner .passengers {
+.section-search .search .tab-content .content .inner .passengers {
   width: 50%;
-  background-image: url("../../images/common/ic_passenger.png");
+  background-image: url(../../images/common/ic_passenger.png);
   background-repeat: no-repeat;
   background-position: 2.4390243902vw;
   background-size: 4.6341463415vw 3.4146341463vw;
   margin-right: 2.4390243902vw;
 }
-.section-search .search .content .inner .seat-type {
+.section-search .search .tab-content .content .inner .seat-type {
   width: 50%;
-  background-image: url("../../images/common/ic_seat_type.png"), url("../../images/common/ic_arrow_down.png");
+  background-image: url(../../images/common/ic_seat_type.png), url(../../images/common/ic_arrow_down.png);
   background-repeat: no-repeat, no-repeat;
   background-position: 2.4390243902vw, right 2.4390243902vw center;
   background-size: 3.9024390244vw 4.8780487805vw, 2.4390243902vw 1.4634146341vw;
   margin-left: 2.4390243902vw;
+}
+.section-search .search .tab-content #tabSearchDomAir .content {
+  border: 1px solid #44C7B3;
 }
 
 .section-supplier .supplier-list {
@@ -602,7 +605,7 @@
     letter-spacing: 1.1707317073vw;
     color: #595758;
     border: solid 0.7317073171vw #555654;
-    background: url(../../images/top/arrow.png) no-repeat;
+    background: url(../../images//arrow.png) no-repeat;
     background-position: right 8.2926829268vw top 50%;
   }
 }
@@ -706,7 +709,7 @@
   transform: translateX(50%);
   border: none;
   font-size: 0;
-  background: url(../../images/top/prev.png) no-repeat center center;
+  background: url(../../images//prev.png) no-repeat center center;
   margin-top: -45px;
 }
 @media screen and (max-width: 1024px) {
@@ -726,7 +729,7 @@
   transform: translateX(50%);
   border: none;
   font-size: 0;
-  background: url(../../images/top/next.png) no-repeat center center;
+  background: url(../../images//next.png) no-repeat center center;
   margin-top: -45px;
 }
 @media screen and (max-width: 1024px) {
@@ -1037,7 +1040,7 @@
 /* let_work_together
 ---------------------------- */
 .let_work_together {
-  background: url(../../images/top/lef_work_together_bg.png) no-repeat center center;
+  background: url(../../images//lef_work_together_bg.png) no-repeat center center;
   background-size: cover;
   padding-top: 180px;
   padding-bottom: 150px;
