@@ -374,6 +374,7 @@
 
 .section-search .search .search-type {
   padding: 3.6585365854vw 4.3902439024vw;
+  margin-bottom: 4.8780487805vw;
   border: 1px solid #fff;
   border-radius: 2.4390243902vw;
   box-shadow: 0px 0px 1.7073170732vw -2px rgba(0, 0, 0, 0.26);
@@ -388,60 +389,86 @@
   text-align: center;
   overflow: hidden;
 }
-.section-search .search .search-type-tab-list-item p {
+.section-search .search .search-type-tab-list-item a:hover {
   text-decoration: none;
-  color: #24253d;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 3.1707317073vw;
 }
-.section-search .search .search-type-tab-list-item .dom-air {
+.section-search .search .search-type-tab-list-item a.active::after {
+  content: "";
+  border-color: black transparent;
+  border-style: solid;
+  border-width: 3.6585365854vw 3.6585365854vw 0 3.6585365854vw;
+  width: 3.6585365854vw;
+  height: 3.6585365854vw;
+  margin-top: 21px;
+  margin-left: -14px;
+  position: absolute;
+}
+.section-search .search .search-type-tab-list-item a.dom-air.active::after {
+  border-color: #44C7B3 transparent;
+}
+.section-search .search .search-type-tab-list-item a.dom-air .inner {
   background-color: #e6fffb;
   width: 100%;
   height: 100%;
   padding: 1.9512195122vw 1.7073170732vw 3.1707317073vw;
 }
-.section-search .search .search-type-tab-list-item .dom-air-icon img {
+.section-search .search .search-type-tab-list-item a.dom-air .inner .icon img {
   width: 7.8048780488vw;
   height: 7.8048780488vw;
 }
-.section-search .search .search-type-tab-list-item .dom-hotel {
+.section-search .search .search-type-tab-list-item a.dom-hotel.active::after {
+  border-color: #8644C7 transparent;
+}
+.section-search .search .search-type-tab-list-item a.dom-hotel .inner {
   background-color: #ece6ff;
   padding: 2.4390243902vw;
   width: 100%;
   height: 100%;
   padding: 4.1463414634vw 1.9512195122vw 2.9268292683vw;
 }
-.section-search .search .search-type-tab-list-item .dom-hotel-icon img {
+.section-search .search .search-type-tab-list-item a.dom-hotel .inner .icon img {
   width: 6.0975609756vw;
   height: 4.6341463415vw;
 }
-.section-search .search .search-type-tab-list-item .dom-hotel p {
+.section-search .search .search-type-tab-list-item a.dom-hotel .inner p {
   margin-top: 0.9756097561vw;
 }
-.section-search .search .search-type-tab-list-item .oversea-air {
+.section-search .search .search-type-tab-list-item a.oversea-air.active::after {
+  border-color: #FF8B03 transparent;
+}
+.section-search .search .search-type-tab-list-item a.oversea-air .inner {
   background-color: #fff7e6;
   padding: 2.4390243902vw;
   width: 100%;
   height: 100%;
   padding: 1.9512195122vw 1.7073170732vw 3.1707317073vw;
 }
-.section-search .search .search-type-tab-list-item .oversea-air-icon img {
+.section-search .search .search-type-tab-list-item a.oversea-air .inner .icon img {
   width: 8.5365853659vw;
   height: 7.8048780488vw;
 }
-.section-search .search .search-type-tab-list-item .oversea-hotel {
+.section-search .search .search-type-tab-list-item a.oversea-hotel.active::after {
+  border-color: #22CE56 transparent;
+}
+.section-search .search .search-type-tab-list-item a.oversea-hotel .inner {
   background-color: #e6ffe9;
   padding: 2.4390243902vw;
   width: 100%;
   height: 100%;
   padding: 2.6829268293vw 2.1951219512vw 2.9268292683vw;
 }
-.section-search .search .search-type-tab-list-item .oversea-hotel-icon img {
+.section-search .search .search-type-tab-list-item a.oversea-hotel .inner .icon img {
   width: 8.5365853659vw;
   height: 6.3414634146vw;
 }
-.section-search .search .search-type-tab-list-item .oversea-hotel p {
+.section-search .search .search-type-tab-list-item a.oversea-hotel .inner p {
   margin-top: 0.7317073171vw;
+}
+.section-search .search .search-type-tab-list-item p {
+  text-decoration: none;
+  color: #24253d;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3.1707317073vw;
 }
 .section-search .search .content {
   padding: 2.4390243902vw;
@@ -503,35 +530,6 @@
   background-position: 2.4390243902vw, right 2.4390243902vw center;
   background-size: 3.9024390244vw 4.8780487805vw, 2.4390243902vw 1.4634146341vw;
   margin-left: 2.4390243902vw;
-}
-.section-search .search .arrow {
-  display: flex;
-  margin-bottom: 4.8780487805vw;
-}
-.section-search .search .arrow-border {
-  flex: 1;
-  position: relative;
-  text-align: center;
-}
-.section-search .search .arrow-border .arrow-down {
-  position: absolute;
-  border-color: black transparent;
-  border-style: solid;
-  border-width: 3.6585365854vw 3.6585365854vw 0 3.6585365854vw;
-  height: 0;
-  width: 0;
-}
-.section-search .search .arrow-border .arrow-down.dom-air {
-  border-color: #44C7B3 transparent;
-}
-.section-search .search .arrow-border .arrow-down.dom-hotel {
-  border-color: #8644C7 transparent;
-}
-.section-search .search .arrow-border .arrow-down.oversea-air {
-  border-color: #FF8B03 transparent;
-}
-.section-search .search .arrow-border .arrow-down.oversea-hotel {
-  border-color: #22CE56 transparent;
 }
 
 .section-supplier .supplier-list {
