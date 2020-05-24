@@ -50,7 +50,7 @@
   padding-right: 0;
 }
 
-/*-----------------*/
+/*------------------------------------*/
 .slick-prev, .slick-next {
   font-size: 0;
   line-height: 0;
@@ -107,28 +107,87 @@
 }
 
 .input {
-  height: 12.1951219512vw;
-  box-shadow: 0px 0px 1.7073170732vw -2px rgba(0, 0, 0, 0.26);
-  border-radius: 0.7317073171vw;
+  height: 50px;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.26);
+  border-radius: 3px;
   border: none;
-  padding-left: 8.5365853659vw;
+  padding-left: 35px;
+  padding-top: 3px;
+  font-size: 17px;
+  line-height: 1.35em;
+  color: #000;
+  width: 100%;
 }
-.input.without-icon {
-  padding-left: 2.4390243902vw;
+.input.icon-without {
+  padding-left: 10px;
+}
+.input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+.input:-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+.input::-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  .input {
+    height: 12.1951219512vw;
+    box-shadow: 0px 0px 2.4390243902vw -2px rgba(0, 0, 0, 0.26);
+    border-radius: 0.7317073171vw;
+    padding-left: 8.5365853659vw;
+    padding-top: 0.7317073171vw;
+  }
+  .input.icon-without {
+    padding-left: 2.4390243902vw;
+  }
 }
 
-.button {
-  margin: 1.2195121951vw 0;
+.etour-btn {
+  margin: 5px 0;
   width: 100%;
-  border-radius: 24.3902439024vw;
-  background-color: #21D8BB;
-  height: 13.4146341463vw;
+  border-radius: 30px;
+  height: 55px;
   color: #FFF;
-  font-size: 5.1219512195vw;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to left, #8cf2e2, #44c7b3);
+  border: none;
+  font-size: 21px;
+}
+@media screen and (max-width: 767px) {
+  .etour-btn {
+    margin: 1.2195121951vw 0;
+    border-radius: 7.3170731707vw;
+    height: 13.4146341463vw;
+    box-shadow: 0 3px 3.9024390244vw 0 rgba(0, 0, 0, 0.1);
+    font-size: 5.1219512195vw;
+  }
 }
 
 .form-group {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.etour-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.w50.p10 {
+  flex: 0 0 calc(100% / 2 - 10px);
+  width: calc(100% /2 - 10px);
+}
+@media screen and (max-width: 767px) {
+  .w50.p10 {
+    flex: 0 0 calc(100% / 2 - 5px);
+    width: calc(100% /2 - 5px);
+  }
 }
 
 /*# sourceMappingURL=common.css.map */

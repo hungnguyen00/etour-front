@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $(".section-search .search .dep-date, .section-search .search .arr-date").datepicker({
+    $(".etour-search-form .dep-date, .etour-search-form .arr-date").datepicker({
         format: 'mm/dd/yyyy',
-        startDate: '-3d'
+        startDate: '-3d',
     });
 });

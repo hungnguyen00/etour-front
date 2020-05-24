@@ -1,5 +1,6 @@
 @import "./config/const";
 @import "./includes/func";
+
 .section {
     padding: 0 10px;
 }
@@ -42,7 +43,7 @@
 }
 
 // Slick button prev, next
-/*-----------------*/
+/*------------------------------------*/
 .slick-prev, .slick-next {
     font-size: 0;
     line-height: 0;
@@ -100,24 +101,77 @@
 }
 
 .input {
+  height: 50px;
+  box-shadow: 0px 0px 10px -2px rgba(#000,0.26);
+  border-radius: 3px;
+  border: none;
+  padding-left: 35px;
+  padding-top: 3px;
+  font-size: 17px;
+  line-height: 1.35em;
+  color: $color_text_default;
+  width: 100%;
+  &.icon-without {
+    padding-left: 10px;
+  }
+  &::placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  &::-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  @include screen ($sp-large) {
     height: setByVW(50);
-    box-shadow: 0px 0px setByVW(7) -2px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px setByVW(10) -2px rgba(#000,0.26);
     border-radius: setByVW(3);
-    border: none;
     padding-left: setByVW(35);
-    &.without-icon {
-        padding-left: setByVW(10);
+    padding-top: setByVW(3);
+    &.icon-without {
+      padding-left: setByVW(10);
     }
+  }
 }
-.button {
-    margin: setByVW(5) 0;
+.etour-btn {
+    margin: 5px 0;
     width: 100%;
-    border-radius: setByVW(100);
-    background-color: #21D8BB;
-    height: setByVW(55);
+    border-radius: 30px;
+    height: 55px;
     color: #FFF;
-    @include font-size-vw(21);
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to left, #8cf2e2, #44c7b3);
+    border: none;
+    font-size: 21px;
+    @include screen ($sp-large) {
+      margin: setByVW(5) 0;
+      border-radius: setByVW(30);
+      height: setByVW(55);
+      box-shadow: 0 3px setByVW(16) 0 rgba(#000, 0.1);
+      @include font-size-vw(21);
+    }
 }
 .form-group {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.etour-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.w50 {
+  &.p10 {
+    flex: 0 0 calc(100% / 2 - 10px);
+    width: calc(100% /2 - 10px);
+    @include screen ($sp-large) {
+      flex: 0 0 calc(100% / 2 - 5px);
+      width: calc(100% /2 - 5px);
+    }
+  }    
 }

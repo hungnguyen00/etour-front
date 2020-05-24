@@ -1,198 +1,189 @@
+// Define your schemes with a name and colors
+$dom-air: dom-air #e6fffb #44c7b3;
+$dom-hotel: dom-hotel #ece6ff #8644C7;
+$oversea-air: oversea-air #fff7e6 #FF8B03;
+$oversea-hotel: oversea-hotel #e6ffe9 #22CE56;
+
+// Here are your color schemes
+$etour-schemes: $dom-air $dom-hotel $oversea-air $oversea-hotel;
 .section-search {
-    .search {
+    .etour-search {
         .search-type {
-            padding: setByVW(15) setByVW(18);
-            margin-bottom: setByVW(20);
+            padding: 20px 23px;
+            margin-bottom: 20px;
             border: 1px solid #fff;
-            border-radius: setByVW(10);
-            box-shadow: 0px 0px setByVW(7) -2px rgba(0,0,0,0.26);
-            &-tab-list {
+            border-radius: 10px;
+            box-shadow: 0px 0px 7px -2px rgba(#000,0.26);
+            @include screen ($sp-large) {
+              padding: setByVW(20) setByVW(23);
+              margin-bottom: setByVW(20);
+              border: 1px solid #fff;
+              border-radius: setByVW(10);            
+            }
+            @each $etour-scheme in $etour-schemes {
+              &-tab-list {
                 display: flex;
-                &-item {
-                    border-radius: setByVW(10);
-                    flex: 1;
-                    margin: setByVW(5);
-                    text-align: center;
-                    overflow: hidden;
-                    a {
-                        &:hover {
-                            text-decoration: none;
+                &-item {                
+                  flex: 1;
+                  margin: 0 5px;                
+                  a.#{nth($etour-scheme, 1)} {
+                    display: block;
+                    position: relative;                        
+                    .inner {
+                      border-radius: 10px;
+                      text-align: center;
+                      background-color: #{nth($etour-scheme, 2)};
+                      padding: 8px 6px 13px;
+                      .icon {
+                        img {
+                            width: 35px;
                         }
-                        &.active {
-                            &::after {    
-                                content: "";
-                                border-color: black transparent;
-                                border-style: solid;
-                                border-width: setByVW(15) setByVW(15) 0 setByVW(15);
-                                width: setByVW(15);
-                                height: setByVW(15);
-                                margin-top: 21px;
-                                margin-left: -14px;
-                                position: absolute;
-                            }
-                        }
-                        &.dom-air {
-                            &.active {
-                                &::after {
-                                    border-color: #44C7B3 transparent;
-                                }
-                            }
-                            .inner {
-                                background-color: #e6fffb;
-                                width: 100%;
-                                height: 100%;
-                                padding: setByVW(8) setByVW(7) setByVW(13);
-                                .icon {
-                                    img {
-                                        width: setByVW(32);
-                                        height: setByVW(32);
-                                    }
-                                }
-                            }
-                        }
-                        &.dom-hotel {
-                            &.active {
-                                &::after {
-                                    border-color: #8644C7 transparent;
-                                }
-                            }
-                            .inner {
-                                background-color: #ece6ff;
-                                padding: setByVW(10);
-                                width: 100%;
-                                height: 100%;
-                                padding: setByVW(17) setByVW(8) setByVW(12);
-                                .icon {
-                                    img {
-                                        width: setByVW(25);
-                                        height: setByVW(19);
-                                    }
-                                }
-                                p {
-                                    margin-top: setByVW(4);
-                                }
-                            }
-                        }
-                        &.oversea-air {
-                            &.active {
-                                &::after {
-                                    border-color: #FF8B03 transparent;
-                                }
-                            }
-                            .inner {
-                                background-color: #fff7e6;
-                                padding: setByVW(10);
-                                width: 100%;
-                                height: 100%;
-                                padding: setByVW(8) setByVW(7) setByVW(13);
-                                .icon {
-                                    img {
-                                        width: setByVW(35);
-                                        height: setByVW(32);
-                                    }
-                                }
-                            }
-                        }
-                        &.oversea-hotel {
-                            &.active {
-                                &::after {
-                                    border-color: #22CE56 transparent;
-                                }
-                            }
-                            .inner {
-                                background-color: #e6ffe9;
-                                padding: setByVW(10);
-                                width: 100%;
-                                height: 100%;
-                                padding: setByVW(11) setByVW(9) setByVW(12);
-                                .icon {
-                                    img {
-                                        width: setByVW(35);
-                                        height: setByVW(26);
-                                    }
-                                }
-                                p {
-                                    margin-top: setByVW(3);
-                                }
-                            }
-                        }
-                    }
-                    p {
+                      }
+                      p {
                         text-decoration: none;
                         color: #24253d;
                         font-family: $font_source_sans_pro;
-                        @include font-size-vw(13);
+                        font-size: 13px;
+                        line-height: 1.15em;
+                      }
                     }
+                    &.active {
+                      .inner {
+                        border: 1px solid #{nth($etour-scheme, 3)};
+                      }
+                      &::after {    
+                        content: "";
+                        border-color: #{nth($etour-scheme, 3)} transparent;
+                        border-style: solid;
+                        border-width: 15px 15px 0 15px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -36px;
+                        position: absolute;
+                      }
+                    }                    
+                  }                  
                 }
+                
+                @include screen ($sp-large) {
+                  margin-left: setByVW(-5);
+                  margin-right: setByVW(-5);
+                  &-item {                                        
+                    margin: 0 setByVW(5);
+                    a.#{nth($etour-scheme, 1)} {                      
+                      .inner {
+                        border-radius: setByVW(10);
+                        padding: setByVW(8) setByVW(7) setByVW(13);
+                        .icon {
+                          img {
+                              width: setByVW(35);
+                          }
+                        }
+                        p {
+                          @include font-size-vw(13);
+                          margin-top: setByVW(3);
+                        }
+                      }
+                      &.active {
+                        &::after {    
+                          border-width: setByVW(15) setByVW(15) 0 setByVW(15);
+                          bottom: setByVW(-36);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
+            
         }
-        .tab-content {
-            .content {
-                padding: setByVW(10);
-                border: 1px solid #44C7B3;
-                border-radius: setByVW(10);
-                box-shadow: 0px 0px setByVW(7) -2px rgba(0,0,0,0.26);
-                display: flex;
-                flex-wrap: wrap;
-                .input {
-                    @include font-size-vw(17);
-                    line-height: 1.35em;
-                }
-                .departure {
-                    width: 100%;
-                    background-image: url(#{$path_images_common}/ic_flight_departure.png), url(#{$path_images_common}/ic_arrow_up_down.png);
-                    background-repeat: no-repeat, no-repeat;
-                    background-position: setByVW(10), right setByVW(10) center;
-                    background-size: setByVW(20) setByVW(17), contain;
-                }
-                .arrival {
-                    width: 100%;
-                    background-image: url(#{$path_images_common}/ic_flight_arrival.png);
-                    background-repeat: no-repeat;
-                    background-position: setByVW(10);
-                    background-size: setByVW(19) setByVW(19);
-                }
-                .inner {
-                    display: flex;
-                    .dep-date {
-                        width: 50%;
-                        background-image: url(#{$path_images_common}/ic_datepicker.png);
-                        background-repeat: no-repeat;
-                        background-position: setByVW(10);
-                        background-size: setByVW(18) setByVW(20);
-                        margin-right: setByVW(10);
-                    }
-                    .arr-date {
-                        width: 50%;
-                        background-image: url(#{$path_images_common}/ic_datepicker.png);
-                        background-repeat: no-repeat;
-                        background-position: setByVW(10);
-                        background-size: setByVW(18) setByVW(20);
-                        margin-left: setByVW(10);
-                    }
-                    .passengers {
-                        width: 50%;
-                        background-image: url(#{$path_images_common}/ic_passenger.png);
-                        background-repeat: no-repeat;
-                        background-position: setByVW(10);
-                        background-size: setByVW(19) setByVW(14);
-                        margin-right: setByVW(10);
-                    }
-                    .seat-type {
-                        width: 50%;
-                        background-image: url(#{$path_images_common}/ic_seat_type.png), url(#{$path_images_common}/ic_arrow_down.png);
-                        background-repeat: no-repeat, no-repeat;
-                        background-position: setByVW(10), right setByVW(10) center;
-                        background-size: setByVW(16) setByVW(20), setByVW(10) setByVW(6);
-                        margin-left: setByVW(10);
-                    }
-                }
+        .etour-search-form {
+          padding: 10px;          
+          border-radius: 10px;
+          box-shadow: 0px 0px 7px -2px rgba(#000,0.26);
+          display: flex;
+          flex-wrap: wrap;
+          @include screen ($sp-large) {
+            padding: setByVW(10);
+            border-radius: setByVW(10);
+            box-shadow: 0px 0px setByVW(7) -2px rgba(0,0,0,0.26);
+          }
+
+          @each $etour-scheme in $etour-schemes {
+            &.#{nth($etour-scheme, 1)} {
+              border: 1px solid #{nth($etour-scheme, 3)};
+              .etour-btn {
+                background-image: linear-gradient(to left, #{nth($etour-scheme, 2)}, #{nth($etour-scheme, 3)});
+              }
             }
-            #tabSearchDomAir {
-                .content {
-                    border: 1px solid #44C7B3;
-                }
+          }
+          .form-group {
+            .icon-has {
+              background-repeat: no-repeat, no-repeat;
+              background-position: 10px;              
             }
+            .input {              
+              width: 100%;
+              &.departure {
+                background-image: url(#{$path_images_common}/ic_flight_departure.png), url(#{$path_images_common}/ic_arrow_up_down.png);                
+                background-position: 10px, right 10px center;
+                background-size: 20px, 44px;
+              }
+              &.arrival {
+                background-image: url(#{$path_images_common}/ic_flight_arrival.png);
+                background-size: 19px;
+              }
+              &.dep-date {
+                background-image: url(#{$path_images_common}/ic_datepicker.png);
+                background-size: 18px;
+              }
+              &.arr-date {
+                background-image: url(#{$path_images_common}/ic_datepicker.png);
+                background-size: 18px;
+              }
+              &.passengers {
+                background-image: url(#{$path_images_common}/ic_passenger.png);
+                background-size: 19px;
+              }
+              &.seat-type {
+                background-image: url(#{$path_images_common}/ic_seat_type.png), url(#{$path_images_common}/ic_arrow_down.png);
+                background-position: 10px, right 10px center;
+                background-size: 16px, 10px;
+              }
+            }
+            @include screen ($sp-large) {
+              .icon-has {
+                background-repeat: no-repeat, no-repeat;
+                background-position: setByVW(10);              
+              }
+              .input {              
+                &.departure {                
+                  background-position: setByVW(10), right setByVW(10) center;
+                  background-size: setByVW(20), setByVW(44);
+                }
+                &.arrival {
+                  background-size: setByVW(19);
+                }
+                &.dep-date {                  
+                  background-size: setByVW(18);
+                }
+                &.arr-date {                
+                  background-size: setByVW(18);
+                }
+                &.passengers {                  
+                  background-size: setByVW(19);
+                }
+                &.seat-type {                  
+                  background-position: setByVW(10), right setByVW(10) center;
+                  background-size: setByVW(16), setByVW(10);
+                }
+              }
+            }
+          }
+
+          .inner {
+              display: flex;
+          }
         }
     }
 }
